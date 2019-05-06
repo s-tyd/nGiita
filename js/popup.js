@@ -18,9 +18,21 @@ window.onload = function () {
     visualizeBlocklist()
 };
 
-// 追加
+
+// Enterキー処理
+$('#text').keypress(function (e) {
+    if (e.which === 13) {
+        $('#set').click();
+    }
+});
+
+// 追加ボタン
 $('#set').on('click', function () {
-// document.getElementById("set").onclick = function () {
+    addBlockID();
+});
+
+// ブロックリストに追加
+function addBlockID() {
     chrome.storage.sync.get("data", function (items) {
         if (!chrome.runtime.error) {
             //追加データ取得
@@ -64,7 +76,8 @@ $('#set').on('click', function () {
             visualizeBlocklist()
         }
     });
-});
+}
+
 
 // ブロックリストの表示設定
 let tag_view_block_list = $('#view_block_list');
