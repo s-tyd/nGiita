@@ -54,6 +54,7 @@ switch (url) {
 $('.blockIcon').on('click', function () {
     const id = $(this).attr('id');
     addBlockID(id);
+    $(".ra-UserList").find(`a:contains(${'@' + id})`).parents('.ra-UserList_content').hide();
     $(".tr-Item").find(`a:contains(${id})`).parents('.tr-Item').hide();
     $(".ms-Item").find(`.ms-ItemContent_author:contains(${id})`).parents('.ms-Item').hide();
     $(".tf-Item.tf-Item-tagFiltered").find(`a:contains(${id})`).parents('.tf-Item.tf-Item-tagFiltered').hide();
