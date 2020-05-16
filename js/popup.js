@@ -85,11 +85,11 @@ let tag_block_list = $('#block_list_div');
 tag_view_block_list.on('click', function () {
     if (tag_block_list.css('display') === 'block') {
         // 表示されている場合の処理
-        tag_view_block_list.text("▼ ブロックリストを表示");
+        tag_view_block_list.text("▼ ブロックリスト");
         tag_block_list.css("display", "none");
     } else {
         // 表示されていない場合の処理
-        tag_view_block_list.text("▲ ブロックリストを非表示");
+        tag_view_block_list.text("▲ 非表示");
         tag_block_list.css("display", "block");
     }
 });

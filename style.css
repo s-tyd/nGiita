@@ -1,0 +1,27 @@
+.blockIcon {
+    float: right;
+    height: 13px;
+    width: 13px;
+    margin-top: 0;
+    margin-right: 5px;
+    cursor: pointer;
+    background-size: 13px;
+    display:inline-block;
+}
+
+.blockIcon:hover {
+    background-position: 0 -13px;
+}
+
+.rankingBlockIcon {
+    float: right;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    background-size: 16px;
+    display:block;
+}
+
+.rankingBlockIcon:hover {
+    background-position: 0 -16px;
+}
